@@ -14,11 +14,6 @@ function App() {
   const [studentId, setStudentId] = useState(0);
   const [isUpdated, setIsUpdated] = useState(false);
 
-  // const [fields,setFields]=useState({
-  //   name:'',
-  //   email:''
-  // })
-
   //useeffect   to call data
   useEffect(() => {
     setData(StudentsData);
@@ -186,11 +181,10 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {/* maping the ietams from studentdata  */}
+          {/* loop method used for  maping the ietams from studentdata  */}
           {data.map((item, index) => {
             return (
               <tr key={index}>
-                {/* <td>{index + 1}</td> */}
                 <td>{item.studentId}</td>
                 <td>{item.fullName}</td>
                 <td>{item.email}</td>
